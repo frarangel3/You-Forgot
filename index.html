@@ -11,39 +11,67 @@
 </head>
 <body>
     <main class="app">
+        <!-- start the header -->
         <section class="greeting">
             <h2 class="title"> 
-                What's up
+                What's up,
                 <input type="text" id="name" placeholder="Name Here">
             </h2>
         </section>
+            <!-- end -->
+
+            <!-- start the form input for what you forgot -->
         <section class="create-todo">
             <form id="new-to-do-form">
-            <h3>What not to forget</h3>
-            <input type="text" name="content" id="content" placeholder="e.g make a video">
+
+            <h3>DID YOU FORGET</h3>
+            <input 
+                type="text" 
+                name="content" 
+                id="content" 
+                placeholder="e.g make a video">
+
+            <!-- pick a label between business and personal -->
+
             <h4>Pick a label</h4>
             <div class="options">
                 <label>
-                    <input type="radio" name="category1" id="category1" value="business">
-                    <span class="bubblebusiness"></span>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category1" 
+                        value="business">
+                    <span class="bubble business"></span>
                     <div>Business</div>
                 </label>
                 <label>
-                    <input type="radio" name="category2" id="category2" value="personal">
-                    <span class="bubblepersonal"></span>
+                    <input 
+                        type="radio" 
+                        name="category" 
+                        id="category2" 
+                        value="personal">
+                    <span class="bubble personal"></span>
                     <div>Personal </div>
                 </label>
+
             </div>
             <input type="submit" value="Add Todo">
         </form>
+
+                    <!-- End of the form input -->
+
+                    <!-- Start of the checkbox form the created inputs -->
         </section>
         <section class="todo-list">
             <h3>Don't Forget</h3>
+
+            <!-- First checkbox for bussiness includes edit and delete -->
+
             <div class="list" id="todo-list">
                 <div class="todolist">
                     <label>
                         <input type="checkbox">
-                        <span class="bubblebusiness"></span>
+                        <span class="bubble business"></span>
                     </label>
                     <div class="todo-content">
                         <input type="text" value="Make a video" readonly>
@@ -53,12 +81,14 @@
                         <button class="delete">Delete</button>
                     </div>
                 </div>
-            
+
+            <!-- Second checkbox for personal includes edit and delete -->
+
             <div class="list" id="todo-list">
                 <div class="todolist">
                     <label>
                         <input type="checkbox">
-                        <span class="bubblepersonal"></span>
+                        <span class="bubble personal"></span>
                     </label>
                     <div class="todo-content">
                         <input type="text" value="Buy Milk" readonly>
@@ -67,11 +97,13 @@
                         <button class="edit">Edit</button>
                         <button class="delete">Delete</button>
                     </div>
+                 </div>
                 </div>
             </div>
-        </div>
         </section>
+        <!-- End of the checkbox -->
     </main>
+    <!-- end of the main html -->
 
 
     <script src="main.js"></script>
